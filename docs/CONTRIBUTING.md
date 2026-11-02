@@ -21,6 +21,16 @@ uv run pytest
 
 `pytest` disables network sockets.
 
+## Documentation
+
+The documentation site uses the `docs` group:
+
+```bash
+uv sync --frozen --group docs && uv run mkdocs build
+```
+
+A GitHub Release deploys that version and points `latest` at it. Pushes to `main` update the `dev` docs.
+
 ## Demo recording
 
 `tools/record_demo.sh` rewrites `examples/demo.cast` and `examples/demo.gif`. It needs [asciinema](https://docs.asciinema.org/) and [agg](https://github.com/asciinema/agg). Run it when the CLI output changes.

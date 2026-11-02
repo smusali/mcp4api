@@ -28,12 +28,12 @@ def main(argv: list[str]) -> int:
     if version is None:
         print("src/mcp4api/__init__.py is missing __version__", file=sys.stderr)
         return 1
-    changelog = (_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+    changelog = (_ROOT / "docs" / "CHANGELOG.md").read_text(encoding="utf-8")
     if _problems(changelog):
         return 1
     if len(argv) == 1:
         if not _has_heading(changelog, _UNRELEASED):
-            print("CHANGELOG.md is missing [Unreleased]", file=sys.stderr)
+            print("docs/CHANGELOG.md is missing [Unreleased]", file=sys.stderr)
             return 1
         return 0
     tag = argv[1]
@@ -42,7 +42,7 @@ def main(argv: list[str]) -> int:
         return 1
     heading = f"## [{version}] - "
     if not any(_is_dated(line, heading) for line in changelog.splitlines()):
-        print(f"CHANGELOG.md has no dated section for {version}", file=sys.stderr)
+        print(f"docs/CHANGELOG.md has no dated section for {version}", file=sys.stderr)
         return 1
     return 0
 
