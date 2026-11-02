@@ -1,0 +1,9 @@
+policy:
+  drift:
+    fail: true
+
+contributors:
+  exclude:
+    - "@cursoragent"
+    - cursoragent@cursor.com
+    - noreply@anthropic.com

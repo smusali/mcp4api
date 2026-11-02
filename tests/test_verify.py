@@ -138,7 +138,7 @@ def test_proxy_blocks_hosts_outside_the_allowlist() -> None:
             payload = sock.recv(1024)
         assert b"403" in payload
         assert proxy.dialed == []
-        assert "example.com" in proxy.blocked
+        assert proxy.blocked == ["example.com"]
     finally:
         proxy.close()
 

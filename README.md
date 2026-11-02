@@ -3,6 +3,7 @@
 mcp4api turns your API docs into a working MCP server, then calls every generated tool against your API and reports which ones work. Built for platform teams who want their product callable by agents.
 
 [![CI](https://github.com/smusali/mcp4api/actions/workflows/ci.yml/badge.svg)](https://github.com/smusali/mcp4api/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-smusali.github.io-blue)](https://smusali.github.io/mcp4api/)
 [![PyPI](https://img.shields.io/pypi/v/mcp4api.svg)](https://pypi.org/project/mcp4api/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/smusali/mcp4api/blob/main/LICENSE)
 [![Python versions](https://img.shields.io/pypi/pyversions/mcp4api.svg)](https://pypi.org/project/mcp4api/)
@@ -103,11 +104,11 @@ async def upload_book_file(
 - A failing tool is a known gap. It is not repaired.
 - Agent curation needs an Anthropic API key.
 
-The full list is in [Limitations](https://github.com/smusali/mcp4api/blob/main/docs/limitations.md).
+The full list is in [Limitations](https://smusali.github.io/mcp4api/latest/limitations/).
 
 ## Contributing
 
-See [Contributing](https://github.com/smusali/mcp4api/blob/main/CONTRIBUTING.md).
+See [Contributing](https://smusali.github.io/mcp4api/latest/CONTRIBUTING/).
 
 ## License
 
